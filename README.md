@@ -41,3 +41,14 @@ Choose **MHD+ Suite** or **Bootmod3 Suite**. Also say **yes or no to the xDelete
     <td><img src="images/current-max-cooling.jpg" alt="Max Cooling menu" width="300"><br>Max Cooling</td>
   </tr>
 </table>
+
+### HUD Gauges
+
+These photos show earlier versions of the windshield overlay.
+
+<table>
+  <tr>
+    <td><img src="images/03_hud_white.jpg" alt="Early HUD Gauges prototype in white" width="300"></td>
+    <td><img src="images/04_hud_orange.jpg" alt="Early HUD Gauges prototype in orange" width="300"></td>
+  </tr>
+</table>
