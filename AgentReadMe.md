@@ -19,6 +19,8 @@ The packaged build is for **NBTevo_N18032I**, **1280 × 480**, with this framewo
 
 Check the gateway used by the payload, 169.254.21.3. If the firmware, frameworks, resolution, or gateway differ, use the [porting workflow](source/docs/PORTING.md) and build for the actual target. Native changes need the QNX SDP 6.5 Linux host tools and ARM GCC 4.4.2. Matching packaged binaries and compatible layout resource changes do not need QNX on the ENET computer.
 
+If you need the toolchain for a native build, the [QNX SDP 6.5 archive](https://archive.org/details/qnxsdp-65.7z) includes the SDK and a license key generator, according to the archive listing. See [Build and deploy](source/docs/BUILD.md) for toolchain setup.
+
 ## Stage and verify
 
 Download and extract the selected packages from [packages/](packages/). The dashboard ZIP contains BoostDeck, ShiftDeck, EngineCodes, and MhdMaps. Include MhdMaps only for the MHD choice. Bootmod3Suite and XDriveControl are separate ZIPs. Read their package notes for module and tune constraints. **The engine must be off before switching between AWD and RWD in either direction.** Install neither when the owner declines them.
