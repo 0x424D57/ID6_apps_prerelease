@@ -4,11 +4,15 @@ Connect your parked car to a computer over wired ENET. Open an AI agent with ter
 
 If your head unit needs temporary SSH access, use [Bavarian SSH Client](https://ssh.bavarian-aa.uk/) when your agent asks. Check that the client supports your exact head unit and firmware.
 
+## iDrive 6 compatibility
+
+The porting workflow can be used to evaluate any iDrive 6 version. Prebuilt packages target the verified reference firmware and framework combination documented in the AgentReadMe. Other versions need a compatibility check and may need a car-specific build. HUD Gauges also requires a compatible factory windshield HUD.
+
 ## Tell your agent what to install
 
-Choose **MHD+ Suite** or **Bootmod3 Suite**. Also say **yes or no to the xDelete-style xDrive menu**. Bootmod3 and xDrive Control are beta packages. xDrive Control is still being tested, with no guarantee of compatibility or operation.
+Choose **MHD+ Suite** or **Bootmod3 Suite**. Also say **yes or no to the xDelete-style xDrive menu** and **yes or no to HUD Gauges**. Bootmod3 and xDrive Control are beta packages. xDrive Control is still being tested, with no guarantee of compatibility or operation.
 
-> My car is parked, iDrive is awake, and this computer is connected over wired ENET. Follow the AgentReadMe to install BoostDeck, ShiftDeck, and Engine Fault Codes. My tuning menu choice is **[MHD+ Suite / Bootmod3 Suite]**. My xDrive Control choice is **[yes / no]**. Verify firmware, framework hashes, and display resolution before uploading. Ask me when temporary SSH or a parked restart is needed.
+> My car is parked, iDrive is awake, and this computer is connected over wired ENET. Follow the AgentReadMe to install BoostDeck, ShiftDeck, and Engine Fault Codes. My tuning menu choice is **[MHD+ Suite / Bootmod3 Suite]**. My xDrive Control choice is **[yes / no]**. My HUD Gauges choice is **[yes / no]**. Verify firmware, framework hashes, and display resolution before uploading. Ask me when temporary SSH or a parked restart is needed.
 
 [Quick Start](Quick%20Start.md) · [Change notes](CHANGELOG.md) · [Native source](source/)
 
@@ -18,31 +22,22 @@ Choose **MHD+ Suite** or **Bootmod3 Suite**. Also say **yes or no to the xDelete
 - **ShiftDeck** displays live speed, an RPM bar, and shift lights with a selectable RPM threshold. Press **OPTIONS** to switch between mph and km/h. This update includes performance improvements.
 - **MHD+ Suite** offers four map slots, exhaust flap control, and Max Cooling on compatible MHD+ tunes.
 - **Bootmod3 Suite** is a new beta control menu for compatible CustomROM tunes. It offers four map slots, exhaust flap control, Active Sound, and burble presets.
-- **xDrive Control** is an xDelete-style beta menu for temporarily selecting rear-wheel drive on supported DSC versions. It is still being tested, with no guarantee of compatibility or operation.
+- **xDrive Control** is an xDelete-style beta menu for temporarily selecting rear-wheel drive on supported DSC versions. It is still being tested, with no guarantee of compatibility or operation. **The engine must be off before switching from AWD to RWD or from RWD to AWD.**
 - **Engine Fault Codes** reads engine/DME fault codes and shows descriptions when available. It can read codes even when the DME refuses to clear them.
+- **HUD Gauges** projects a live curved tachometer and numeric boost in PSI onto the factory windshield HUD. The tach spans 0–8,000 RPM, with a thicker redline zone starting at 6,700 RPM. Enable **My Vehicle → HUD Gauges → Show HUD gauges** to keep the display on after leaving the menu and restore it at the next boot. Uncheck it to clear the display. The overlay yields when it detects factory navigation guidance. [HUD Gauges package](packages/hud-gauges.zip)
 
-## Photo Showcase (Old UI)
-
-<table>
-  <tr>
-    <td><img src="images/01_boostdeck_daylight.jpg" alt="BoostDeck in daylight" width="300"></td>
-    <td><img src="images/02_boostdeck_closeup.jpg" alt="BoostDeck close-up" width="300"></td>
-  </tr>
-  <tr>
-    <td><img src="images/05_shiftdeck.jpg" alt="ShiftDeck" width="300"></td>
-    <td><img src="images/06_boostdeck_night.jpg" alt="BoostDeck at night" width="300"></td>
-  </tr>
-  <tr>
-    <td><img src="images/07_boostdeck_ambient.jpg" alt="BoostDeck with ambient lighting" width="300"></td>
-    <td><img src="images/08_mhd_maps.jpg" alt="MHD Maps" width="300"></td>
-  </tr>
-</table>
-
-Earlier HUD prototype photos
+## Photo Showcase
 
 <table>
   <tr>
-    <td><img src="images/03_hud_white.jpg" alt="HUD prototype in white" width="300"></td>
-    <td><img src="images/04_hud_orange.jpg" alt="HUD prototype in orange" width="300"></td>
+    <td><img src="images/current-boostdeck.jpg" alt="BoostDeck with the Active Ethanol bar" width="300"><br>BoostDeck</td>
+    <td><img src="images/current-shiftdeck.jpg" alt="ShiftDeck with RPM and speed" width="300"><br>ShiftDeck</td>
+  </tr>
+  <tr>
+    <td><img src="images/current-mhd-maps.jpg" alt="Four MHD+ map tiles" width="300"><br>MHD+ Suite</td>
+    <td><img src="images/current-exhaust-flap.jpg" alt="Exhaust flap controls" width="300"><br>Exhaust flap</td>
+  </tr>
+  <tr>
+    <td><img src="images/current-max-cooling.jpg" alt="Max Cooling menu" width="300"><br>Max Cooling</td>
   </tr>
 </table>

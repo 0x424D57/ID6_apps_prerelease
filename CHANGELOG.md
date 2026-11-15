@@ -6,3 +6,4 @@
 - **Bootmod3 Suite** adds a new control menu for compatible CustomROM tunes. Beta.
 - **xDrive Control** adds an xDelete-style menu for temporary rear-wheel drive on supported DSC variants. Still being tested, with no guarantee. Beta.
 - **Engine Fault Codes** reads engine codes and shows their descriptions when available. It can read codes even when the DME refuses to clear them.
+- **HUD Gauges** adds a curved windshield tachometer and numeric boost in PSI, with a persistent on/off checkbox. The packaged build targets the reference 340i with its factory HUD.
