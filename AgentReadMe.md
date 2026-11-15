@@ -2,7 +2,7 @@
 
 ## Select the apps
 
-Ask the owner for their choice of **MHD+ Suite**, **Bootmod3 Suite**, or **none**, and whether they want **xDrive Control**. Install only the selected tuning menu. Install xDrive Control only when selected. BoostDeck, ShiftDeck, and Engine Fault Codes are independent apps.
+Ask the owner for their choice of **MHD+ Suite** or **Bootmod3 Suite**, and whether they want **xDrive Control**. Install only the selected tuning menu. Install xDrive Control only when selected. BoostDeck, ShiftDeck, and Engine Fault Codes are independent apps.
 
 ## Identify the car
 
