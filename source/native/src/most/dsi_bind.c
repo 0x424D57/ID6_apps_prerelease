@@ -48,7 +48,12 @@ int most_dsi_bind(void)
     if (bound) return bound > 0 ? 0 : -1;
     bound = -1;
     lib = dlopen("libsys_dsi_base.cpp-ne.so.4", RTLD_NOW | RTLD_GLOBAL);
-    if (!lib) lib = dlopen("/opt/sys/lib/libsys_dsi_base.cpp-ne.so.4", RTLD_NOW | RTLD_GLOBAL);
+    if (!lib) {
+        /* Without /opt/sys/lib in LD_LIBRARY_PATH (plugins built before the fallback), the full path alone
+           still fails on its service-broker dependency, so load that first by full path too. */
+        dlopen("/opt/sys/lib/libsys_dsi_servicebroker.cpp-ne.so.4", RTLD_NOW | RTLD_GLOBAL);
+        lib = dlopen("/opt/sys/lib/libsys_dsi_base.cpp-ne.so.4", RTLD_NOW | RTLD_GLOBAL);
+    }
     if (!lib) { fprintf(stderr, "MOST unavailable: %s\n", dlerror()); return -1; }
     typedef char table_matches_names[sizeof most_dsi == sizeof names ? 1 : -1];
     (void)sizeof(table_matches_names);
