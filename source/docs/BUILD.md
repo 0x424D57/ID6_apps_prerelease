@@ -28,7 +28,7 @@ python3 -m pip install Pillow
 sh native/build.sh
 ```
 
-The script compiles the native libraries, worker executables, and the small ARM file-operations helper. The XML and manifests in `native/plugin` are the current layouts. Use the matching image archives from the packaged release.
+The script compiles the native libraries, worker executables, and the small ARM file-operations helper. Every worker includes the [MOST fallback](MOST.md). It opens the DSI library at run time, so no private library is needed to build it. The XML and manifests in `native/plugin` are the current layouts. Use the matching image archives from the packaged release.
 
 ## New firmware
 
